@@ -1,0 +1,134 @@
+/* CineVerse - Modern Clean White Styling */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-accent: #2563eb;
+  --secondary-accent: #4f46e5;
+  --gold-rating: #f59e0b;
+  --bg-deep: #ffffff;
+  --bg-card: #ffffff;
+  --border-subtle: #e2e8f0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-deep) !important;
+  color: #0f172a !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Brand Title Gradient */
+.brand-title {
+  letter-spacing: -0.5px;
+  color: #0f172a !important;
+}
+.brand-logo-icon {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%),
+              radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent);
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Movie Card Modern White Styling */
+.movie-card {
+  background-color: #ffffff !important;
+  border-radius: 1rem;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.12), 0 0 15px 0 rgba(37, 99, 235, 0.15) !important;
+  border-color: #93c5fd !important;
+}
+
+/* Poster Aspect Ratio & Overlay */
+.poster-container {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  position: relative;
+  background-color: #f1f5f9;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.04);
+}
+
+.poster-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.movie-card:hover .poster-overlay {
+  opacity: 1;
+}
+
+/* Line Clamp Utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hover-primary:hover {
+  color: #2563eb !important;
+}
+
+/* Rotating icon */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-icon {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Footer Styling */
+.footer-cineverse {
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
